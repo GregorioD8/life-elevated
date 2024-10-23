@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import MyNavbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
+import { UserPerformanceProvider } from './components/UserPerformanceContext';
+
+const Services = lazy(() => import('./components/Services'));
+const AboutMe = lazy(() => import('./components/AboutMe'));
 
 function App() {
   return (
-    <>
+    <UserPerformanceProvider>
       <MyNavbar />
       <HeroSection />
-      <Services />
-      <AboutMe />
-      <Footer /> 
-    </>
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <Services />
+      </Suspense>
+      <Suspense fallback={<div>Loading About Me...</div>}>
+        <AboutMe />
+      </Suspense>
+      <Footer />
+    </UserPerformanceProvider>
   );
 }
 

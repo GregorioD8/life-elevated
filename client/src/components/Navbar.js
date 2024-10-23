@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
-const MyNavbar = () => {
+const MyNavbar = ({ onNavClick }) => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
@@ -9,9 +9,9 @@ const MyNavbar = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#services">Services</Nav.Link>
-            <Nav.Link href="#about">About Me</Nav.Link>
+            <Nav.Link href="#home" onClick={onNavClick}>Home</Nav.Link>
+            <Nav.Link href="#services" onClick={onNavClick}>Services</Nav.Link>
+            <Nav.Link href="#about" onClick={onNavClick}>About Me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
