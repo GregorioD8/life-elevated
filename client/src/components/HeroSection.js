@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { UserPerformanceContext } from './UserPerformanceContext';
-import { Button } from 'react-bootstrap'; // Import Bootstrap Button
 import QuizPopup from './QuizPopup'; // Import QuizPopup component
 
 const HeroSection = () => {
