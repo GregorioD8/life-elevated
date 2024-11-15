@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { UserPerformanceContext } from './UserPerformanceContext';
 import QuizPopup from './QuizPopup'; // Import QuizPopup component
-
+// maybe get rid of the modal? 
 const HeroSection = () => {
   const { performance } = useContext(UserPerformanceContext);
   const [showQuiz, setShowQuiz] = useState(false); // State for controlling modal

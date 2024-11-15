@@ -50,12 +50,12 @@ const Quiz = ({ onClose }) => {
 
   return (
     <div>
-      <h2 className="mb-4" style={{ fontSize: '2rem' }}>Energy Multiplier Quiz</h2>
-      <h4 className="mb-4" style={{ fontSize: '1.2rem' }}>On a scale of 1-10, please rate the following:</h4>
+        <h2 className="mb-4" style={{ fontSize: '2rem', color: 'white' }}>Energy Multiplier Quiz</h2>
+        <h4 className="mb-4" style={{ fontSize: '1.5rem', color: 'white' }}>(On a scale of 1-10, please rate the following)</h4>
 
       {/* Display the current question */}
       <div>
-        <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{questions[currentQuestionIndex].question}</p>
+        <p style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{questions[currentQuestionIndex].question}</p>
         <input
           type="number"
           min="1"

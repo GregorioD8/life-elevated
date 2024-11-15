@@ -4,7 +4,7 @@ root/
 └── client/
     ├── public/
     │   └── images/
-    │       └── Moab2.jpg (make sure this image is in your public images folder)
+    │       └── Moab2.jpg 
     ├── src/
     │   ├── components/
     │   │   ├── HeroSection.js
