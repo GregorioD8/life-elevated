@@ -1,4 +1,4 @@
-/* Hero Section */
+
 .hero-container {
   background: url('/public/images/Moab2.jpg') no-repeat center center/cover;
   height: 100vh;
@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark gradient overlay */
+  background: rgba(0, 0, 0, 0.5); 
   z-index: 0;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .hero-content h1 {
-  font-size: 4.5rem; /* Increased font size */
+  font-size: 4.5rem; 
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content p {
-  font-size: 2rem; /* Increased font size */
+  font-size: 2rem; 
   margin-bottom: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -44,11 +44,11 @@
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Space between buttons */
+  gap: 1.5rem; 
 }
 
 button {
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.5rem; 
   padding: 0.75rem 2rem;
   z-index: 1;
   transition: all 0.3s ease;
@@ -62,23 +62,22 @@ button:focus {
   outline: 2px solid #fff;
 }
 
-/* Main Buttons (Start Journey + Quiz) */
 .btn-primary {
   background-color: #007bff;
   border: none;
   padding: 0.75rem 2rem;
 }
 
-/* Main Button Styling (Take the Quiz) */
+
 .btn-quiz {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Center the content */
-  font-size: 1.5rem; /* Increased font size */
-  padding: 0.5rem 1.5rem; /* Adjust the padding */
+  justify-content: center; 
+  font-size: 1.5rem; 
+  padding: 0.5rem 1.5rem; 
   color: white;
   background: transparent;
-  border: none; /* No border */
+  border: none; 
   transition: all 0.3s ease;
   line-height: normal;
 }
@@ -87,28 +86,28 @@ button:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;  /* Adjusted icon size */
+  width: 2rem;  
   height: 2rem;
   border-radius: 50%;
-  background-color: #007bff; /* Circle background */
-  font-size: 1.5rem; /* Increased icon size */
-  color: white; /* Icon color */
-  margin-right: 0.5rem; /* Space between icon and text */
+  background-color: #007bff; 
+  font-size: 1.5rem; 
+  color: white; 
+  margin-right: 0.5rem; 
   transition: all 0.3s ease;
 }
 
-/* On Hover: Make the text and icon change smoothly */
+
 .btn-quiz:hover {
-  background-color: transparent; /* Keep background transparent */
-  color: #ffffff; /* White text on hover */
+  background-color: transparent; 
+  color: #ffffff; 
 }
 
 .btn-quiz:hover i {
-  background-color: #007bff; /* Blue background for the circle */
-  color: white; /* White arrow icon */
+  background-color: #007bff;
+  color: white; 
 }
 
-/* Quiz Modal */
+
 .quiz-modal {
   position: fixed;
   top: 0;
@@ -120,12 +119,12 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10; /* Ensure the modal is above other content */
+  z-index: 10; 
 }
 
 .quiz-container {
-  background: rgba(50, 50, 50, 0.9); /* Darker background for contrast */
-  padding: 2rem; /* Increased padding for more space */
+  background: rgba(50, 50, 50, 0.9); 
+  padding: 2rem; 
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
@@ -134,22 +133,22 @@ button:focus {
 }
 
 .quiz-container label {
-  color: white;  /* Change text color to white for better contrast */
-  font-size: 1.75rem; /* Increased font size */
+  color: white; 
+  font-size: 1.75rem; 
 }
 
-/* Setting modal text color to white */
+
 .quiz-container h2,
 .quiz-container p,
 .quiz-container label {
-  color: white;  /* Set text color to white */
-  font-size: 2rem; /* Increased text size */
+  color: white; 
+  font-size: 2rem; 
 }
 
 .quiz-container input[type="number"] {
   margin: 1rem 0;
   padding: 0.5rem;
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.5rem; 
   width: 100%;
   max-width: 200px;
   text-align: center;
@@ -158,7 +157,7 @@ button:focus {
 .quiz-container .submit-btn {
   background-color: #007bff;
   color: white;
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.5rem; 
   padding: 0.75rem 2rem;
   border-radius: 50px;
   border: none;
@@ -171,14 +170,14 @@ button:focus {
   background-color: #0056b3;
 }
 
-/* Modal Close Button */
+
 .close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
   background-color: transparent;
   border: none;
-  font-size: 2rem; /* Increased font size */
+  font-size: 2rem; 
   cursor: pointer;
   color: white;
   z-index: 9999;
@@ -188,19 +187,19 @@ button:focus {
   color: #ffcc00;
 }
 
-/* Ensure CTA Button doesn't float above the modal */
+
 .btn-primary, .btn-quiz {
-  z-index: 1; /* Behind the modal */
+  z-index: 1;
 }
 
-/* Service Recommendations after Quiz */
+
 .post-quiz-section {
   text-align: center;
   padding: 2rem;
 }
 
 .post-quiz-section h2 {
-  font-size: 3rem; /* Increased font size */
+  font-size: 3rem; 
   margin-bottom: 1.5rem;
 }
 
@@ -211,62 +210,61 @@ button:focus {
   flex-wrap: wrap;
 }
 
-/* Ensure modal text is white */
+
 .quiz-modal h2,
 .quiz-modal p,
 .quiz-modal label,
 .post-quiz-section h2,
 .post-quiz-section p,
 .post-quiz-section button {
-  color: white;  /* Set the text color to white */
+  color: white; 
 }
 
-/* Optional: Add more specific text styling inside the post-quiz section */
 .post-quiz-section h4,
 .post-quiz-section h5,
 .post-quiz-section h3,
 .post-quiz-section h2,
 .post-quiz-section p {
-  color: white;  /* Ensure all text in the post-quiz section is white */
+  color: white;  
 }
 
-/* Additional hover styling for buttons if needed */
+
 .post-quiz-section button:hover {
   background-color: #007bff;
-  color: white;  /* White text on hover */
+  color: white;  
 }
 
-/* Customize the number input field */
+
 .form-control {
   padding: 0.5rem;
-  border-radius: 0.5rem; /* Rounded corners */
-  text-align: center;    /* Center the number */
-  box-shadow: none;      /* Remove default shadow */
-  border: 1px solid #007bff;  /* Match the border with your button color */
-  max-width: 120px;      /* Set a max width */
+  border-radius: 0.5rem; 
+  text-align: center;    
+  box-shadow: none;      
+  border: 1px solid #007bff;  
+  max-width: 120px;      
   margin-bottom: 1rem;
 }
 
 .form-control:focus {
-  border-color: #0056b3;  /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow */
+  border-color: #0056b3;  
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .submit-btn {
-  background-color: #007bff; /* Same blue color */
+  background-color: #007bff; 
   border: none;
-  padding: 0.75rem 2rem; /* Same padding as Start Your Journey button */
+  padding: 0.75rem 2rem; 
   color: white;
-  font-size: 1.5rem; /* Increased font size */
-  border-radius: 0.375rem; /* Border radius matching */
-  margin-top: 1rem; /* Add some space above the button */
+  font-size: 1.5rem; 
+  border-radius: 0.375rem; 
+  margin-top: 1rem; 
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease; 
 }
 
 .submit-btn:hover {
-  background-color: #0056b3; /* Hover color */
-  transform: scale(1.05); /* Hover effect like the Start button */
+  background-color: #0056b3; 
+  transform: scale(1.05); 
 }
 
 .navbar-brand {
@@ -349,14 +347,13 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem; /* Space between cards */
+  gap: 1.5rem; 
 }
 .service-card {
-  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); /* Light gray gradient */
-  color: black;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); 
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -364,7 +361,7 @@ button:focus {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #007bff; /* Blue color for the title */
+  color: #007bff; 
 }
 
 .service-card p {
@@ -375,28 +372,28 @@ button:focus {
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .services-section .row {
-  row-gap: 2rem; /* Adds vertical spacing between rows */
+  row-gap: 2rem; 
 }
 
 .services-intro {
   text-align: center;
-  font-size: 1.25rem; /* Slightly larger than body text */
-  font-weight: 500; /* Semi-bold for readability */
-  color: #333; /* Neutral dark gray for professionalism */
+  font-size: 1.25rem; 
+  font-weight: 500; 
+  color: #333; 
   padding: 1.5rem 2rem;
-  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); /* Soft gradient */
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); 
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
   margin-bottom: 2rem;
   position: relative;
 }
 
 .services-intro span {
-  color: #007bff; /* Brand blue for emphasis */
+  color: #007bff; 
   font-weight: bold;
 }
 
