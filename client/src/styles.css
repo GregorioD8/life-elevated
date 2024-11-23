@@ -268,3 +268,154 @@ button:focus {
   background-color: #0056b3; /* Hover color */
   transform: scale(1.05); /* Hover effect like the Start button */
 }
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #f9f9f9, #fff);
+}
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.service-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Space between cards */
+}
+.service-card {
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); /* Light gray gradient */
+  color: black;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #007bff; /* Blue color for the title */
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow on hover */
+}
+
+.services-section .row {
+  row-gap: 2rem; /* Adds vertical spacing between rows */
+}
+
+.services-intro {
+  text-align: center;
+  font-size: 1.25rem; /* Slightly larger than body text */
+  font-weight: 500; /* Semi-bold for readability */
+  color: #333; /* Neutral dark gray for professionalism */
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea); /* Soft gradient */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.services-intro span {
+  color: #007bff; /* Brand blue for emphasis */
+  font-weight: bold;
+}
+
+.services-intro::before,
+.services-intro::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+
+  border-radius: 3px;
+}
+
+.services-intro::before {
+  top: 0;
+}
+
+.services-intro::after {
+  bottom: 0;
+}

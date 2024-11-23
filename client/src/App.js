@@ -1,25 +1,28 @@
 import React, { Suspense, lazy } from 'react';
-import MyNavbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CustomNavbar from './components/CustomNavbar'; // Updated import
 import Footer from './components/Footer';
-import { UserPerformanceProvider } from './components/UserPerformanceContext';
 
-const Services = lazy(() => import('./components/Services'));
-const AboutMe = lazy(() => import('./components/AboutMe'));
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const AboutMe = lazy(() => import('./pages/AboutMe'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (
-    <UserPerformanceProvider>
-      <MyNavbar />
-      <HeroSection />
-      <Suspense fallback={<div>Loading Services...</div>}>
-        <Services />
-      </Suspense>
-      <Suspense fallback={<div>Loading About Me...</div>}>
-        <AboutMe />
+    <Router>
+      <CustomNavbar /> 
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Suspense>
       <Footer />
-    </UserPerformanceProvider>
+    </Router>
   );
 }
 

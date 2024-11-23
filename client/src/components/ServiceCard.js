@@ -1,10 +1,3 @@
-/**
- * ServiceCard component is a reusable UI element that can be used to display any service.
- * Props:
- * - title: Title of the service.
- * - description: Description of the service.
- */
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -16,7 +9,9 @@ const ServiceCard = ({ title, description }) => {
       y: 0,
       transition: {
         duration: 0.8,
-        type: "spring",
+        type: 'spring',
+        stiffness: 50,
+        damping: 20,
       },
     },
   };
@@ -29,7 +24,8 @@ const ServiceCard = ({ title, description }) => {
       viewport={{ once: true }}
       variants={cardVariants}
     >
-      <div className="service-box">
+      <div className="service-card">
+        <div className="card-gradient"></div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
