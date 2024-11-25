@@ -1,28 +1,59 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const Contact = () => {
+const ContactSection = () => {
+  const contentVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'spring', stiffness: 50, damping: 20 },
+    },
+  };
+
   return (
-    <div className="contact-section" id="contact">
-      <div className="container text-center">
-        <h2>Contact Us</h2>
-        <p>Ready to elevate your performance? Reach out to us today!</p>
-      </div>
-      <div className="contact-form-container">
-        <form className="contact-form">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" />
-
-          <label htmlFor="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email address" />
-
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
+    <section className="contact-section">
+      <motion.div
+        className="container"
+        initial="hidden"
+        animate="visible"
+        variants={contentVariants}
+      >
+        <motion.h2
+          className="contact-title"
+          variants={contentVariants}
+        >
+          Ready to Elevate Your Life?
+        </motion.h2>
+        <motion.p
+          className="contact-tagline"
+          variants={contentVariants}
+        >
+          Take the first step towards high performance and lasting impact.
+          Connect with Jeff today to get started on your journey.
+        </motion.p>
+        <motion.div
+          className="contact-buttons"
+          variants={contentVariants}
+        >
+          <a href="tel:6024486896" className="contact-btn">
+            Call Now
+          </a>
+          <a href="mailto:info@lifeelevatedconsulting.com" className="contact-btn">
+            Send an Email
+          </a>
+        </motion.div>
+        <motion.p
+          className="contact-info"
+          variants={contentVariants}
+        >
+          Or reach us directly: <br />
+          <strong>Phone:</strong> 602-448-6896 <br />
+          <strong>Email:</strong> info@lifeelevatedconsulting.com
+        </motion.p>
+      </motion.div>
+    </section>
   );
 };
 
-export default Contact;
+export default ContactSection;

@@ -8,83 +8,99 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-// Register required components
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+// Register required components and plugins
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
 const CareerTimeline = () => {
   const data = {
     labels: [
       'Phoenix Fire Department',
       'Avondale Fire Chief',
-      'Mesa Community College',
-      'Texas A&M Instructor',
+      'Teaching Roles',
       'Performance Specialist',
     ],
     datasets: [
       {
         label: 'Years of Service',
-        data: [33, 5, 20, 10, 4],
-        backgroundColor: ['#00509E', '#57A0D3', '#A9D6E5', '#74C69D', '#40916C'], // Muted tones
-        hoverBackgroundColor: ['#003F73', '#4B93BA', '#92C8D8', '#66B48D', '#387F58'], // Hover colors
+        data: [33, 5, 20, 4],
+        backgroundColor: '#00509E', // Solid blue color
+        hoverBackgroundColor: '#003F7D', // Darker blue on hover
+        borderRadius: 10, // Rounded bars for modern look
       },
     ],
   };
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false, // Allow custom size
     plugins: {
       legend: {
-        position: 'top',
-        labels: {
-          font: {
-            size: 14, // Adjust font size
-          },
-          color: '#333', // Adjust font color
-        },
+        display: false, // Hide the legend
       },
       tooltip: {
-        callbacks: {
-          label: (tooltipItem) =>
-            `${tooltipItem.label}: ${tooltipItem.raw} years`,
+        enabled: false, // Disable tooltips for a cleaner look
+      },
+      datalabels: {
+        display: true,
+        align: 'end',
+        anchor: 'end',
+        color: '#FFFFFF', // White color for visibility
+        font: {
+          size: 16, // Larger font for data labels
+          weight: 'bold',
         },
+        formatter: (value) => `${value} yrs`,
       },
     },
     scales: {
       x: {
-        type: 'category',
-        title: {
-          display: true,
-          text: 'Career Positions',
-          font: {
-            size: 16,
-          },
-          color: '#333',
-        },
+        beginAtZero: true,
         grid: {
-          display: false, // Hide grid lines
+          drawOnChartArea: false, // Hide grid lines for a floating effect
         },
-      },
-      y: {
         title: {
           display: true,
           text: 'Years of Service',
           font: {
-            size: 16,
+            size: 16, // Larger font size for the title
           },
           color: '#333',
         },
-        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 14, // Larger font size for x-axis ticks
+          },
+        },
+      },
+      y: {
+        type: 'category',
         grid: {
-          color: '#ccc', // Subtle grid color
+          display: false, // Remove horizontal grid lines
+        },
+        ticks: {
+          font: {
+            size: 20, // Increase font size for y-axis labels
+            weight: 'bold', // Make the labels bold for better visibility
+          },
+          color: '#FFFFFF', // White color for labels
         },
       },
     },
+    indexAxis: 'y', // Horizontal bars
+  };
+
+  const chartStyle = {
+    padding: '20px',
+    background: 'transparent', // Fully transparent background
+    borderRadius: '10px',
+    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Subtle shadow for floating effect
   };
 
   return (
-    <div style={{ padding: '20px', background: '#f9f9f9', borderRadius: '10px' }}>
-      <Bar data={data} options={options} />
+    <div style={chartStyle}>
+      <Bar data={data} options={options} width={600} height={400} />
     </div>
   );
 };

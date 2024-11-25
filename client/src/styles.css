@@ -1,3 +1,10 @@
+/* Global Font Settings */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Default font size */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Default text color */
+}
 /* Hero Section */
 .hero-container {
   background: url('/public/images/Moab3.jpg') no-repeat center center/cover;
@@ -30,14 +37,15 @@
 }
 
 .hero-content h1 {
-  font-size: 4.5rem; 
+  font-size: 5rem; 
+  font-weight: 500; 
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content p {
-  font-size: 2rem; 
-  margin-bottom: 2rem;
+  font-size: 2.2rem; 
+  margin-bottom: 8rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -113,63 +121,57 @@ button:focus {
   border: none;
   padding: 0.75rem 2rem;
 }
-
 /* Contact Section */
 .contact-section {
-  padding: 4rem 0;
-  background: linear-gradient(to bottom, #f9f9f9, #fff);
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6), /* Top color: semi-transparent black */
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('/public/images/Snow5.jpg') no-repeat center center/cover;
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
 }
 
-.contact-form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form label {
-  font-size: 1rem;
+.contact-title {
+  font-size: 3rem; /* Larger font size */
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
+  margin-bottom: 1.5rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.contact-tagline {
+  font-size: 2rem; /* Larger font size for tagline */
+  margin-bottom: 2rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Increase spacing between buttons */
+  margin-bottom: 2rem;
 }
 
-.contact-form button {
-  width: 100%;
-  padding: 0.75rem;
+.contact-btn {
   background-color: #007bff;
   color: white;
-  font-size: 1.25rem;
-  font-weight: bold;
-  border: none;
+  padding: 1rem 2rem; /* Larger padding for bigger buttons */
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1.25rem; /* Larger font size for buttons */
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact-btn:hover {
   background-color: #0056b3;
-  transform: scale(1.02);
+  transform: scale(1.1); /* Slightly larger hover effect */
+}
+
+.contact-info {
+  font-size: 1.5rem; /* Larger font size for contact info */
+  line-height: 1.8;
+  color: white; /* Light gray for contrast */
 }
 
 /* Services Section */
@@ -262,14 +264,14 @@ button:focus {
 }
 
 .trusted-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 500;
   color: #333;
   margin-bottom: 1rem;
 }
 
 .trusted-text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #555;
   line-height: 1.6;
 }
@@ -283,4 +285,292 @@ button:focus {
 .company-name:hover {
   color: #0056b3;
   text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+}
+/* Services Section */
+.services-section {
+  background: url('/public/images/Snow3.jpg') no-repeat center center/cover;
+  background-position: center 65%; /* Move image up slightly */
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.services-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for improved readability */
+}
+
+.services-summary {
+  font-size: 1.5rem;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.services-btn {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.trusted-section {
+  background: linear-gradient(to right, #9b9b9b, #d4d4d4);
+  padding: 1.5rem 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, .5);
+  z-index: 1000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth fade and slide */
+}
+
+.trusted-section.visible {
+  transform: translateY(0); /* Bring it into view */
+  opacity: 1;
+}
+
+.trusted-section.hidden {
+  transform: translateY(100%); /* Slide it down out of view */
+  opacity: 0;
+}
+
+.trusted-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.trusted-text {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.company-name {
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.company-name:hover {
+  color: #0056b3;
+  text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* About/Meet Jeff Section */
+.about-section {
+  background: url('/public/images/Moab2.jpg') no-repeat;
+  background-size: 100%; /* Slight zoom-out */
+  background-position: center 30%; /* Move image up slightly */
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Add a dark overlay for better text visibility */
+  z-index: 0;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.learn-more-btn {
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  font-size: 1.25rem; /* Slightly larger footer text */
+}
+
+
+/* Energy Multiplier Section */
+.energy-multiplier-section {
+  background: url('/public/images/Snow4.jpg') no-repeat center center/cover;
+  color: blue;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.energy-multiplier-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+  z-index: 0;
+}
+
+.energy-multiplier-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.energy-title {
+  font-size: 3rem; /* Adjust font size for title */
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+}
+
+.energy-multiplier-section p {
+  font-size: 1.5rem; /* Adjust font size for paragraph */
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.energy-multiplier-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.energy-multiplier-section li {
+  font-size: 1.25rem; /* Adjust font size for list items */
+  margin-bottom: 1rem;
+  text-align: left; /* Align text for clarity */
+}
+
+
+
+
+
+
+
+.energy-multiplier-section {
+  background-color: #f7f7f7; /* Light gray */
+}
+
+.energy-multiplier-section {
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.divider {
+  width: 100%;
+  height: 200px;
+  background-color: #ccc; /* Neutral color */
+  margin: 20px 0;
+}
+
+/* Wrapper for the section layout to include the background effect */
+.section-layout-wrapper {
+  background: linear-gradient(to bottom right, #e0e5ef, #f9f9f9); /* Subtle gradient */
+  padding: 6rem 2rem; /* Space around the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container */
+.section-layout {
+  background: white;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Smooth shadow for depth */
+  padding: 2rem;
+  max-width: 800px; /* Limit width for readability */
+  text-align: center;
+}
+
+/* Title styling */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Summary styling */
+.section-summary {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-text2 {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+.about-text3 {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
 }
