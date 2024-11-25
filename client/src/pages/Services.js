@@ -1,4 +1,4 @@
-// components/Services.js
+// /src/pages/Services.js
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 

@@ -1,3 +1,4 @@
+// src/components/HeroSection.js
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import 'aos/dist/aos.css'; // Import AOS styles

@@ -1,3 +1,4 @@
+// src/components/ServicesSection.js
 import React from 'react';
 import SectionLayout from './SectionLayout';
 

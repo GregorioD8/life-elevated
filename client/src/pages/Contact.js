@@ -1,3 +1,4 @@
+// /src/pages/Contact.js
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -39,7 +40,7 @@ const ContactSection = () => {
           <a href="tel:6024486896" className="contact-btn">
             Call Now
           </a>
-          <a href="mailto:info@lifeelevatedconsulting.com" className="contact-btn">
+          <a href="mailto:jeffcaselifeelevated@gmail.com" className="contact-btn">
             Send an Email
           </a>
         </motion.div>
@@ -47,9 +48,9 @@ const ContactSection = () => {
           className="contact-info"
           variants={contentVariants}
         >
-          Or reach us directly: <br />
+          
           <strong>Phone:</strong> 602-448-6896 <br />
-          <strong>Email:</strong> info@lifeelevatedconsulting.com
+          <strong>Email:</strong> jeffcaselifeelevated@gmail.com
         </motion.p>
       </motion.div>
     </section>

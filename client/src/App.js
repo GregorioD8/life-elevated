@@ -1,3 +1,4 @@
+// /src/App.js
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CustomNavbar from './components/CustomNavbar'; // Updated import

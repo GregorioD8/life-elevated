@@ -1,3 +1,4 @@
+// src/components/AboutSection.js
 import React from 'react';
 import '../styles.css'; // Import the styles
 

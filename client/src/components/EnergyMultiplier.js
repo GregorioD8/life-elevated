@@ -1,3 +1,4 @@
+// src/components/EnergyMultiplier.js
 import React from 'react';
 import SectionLayout from './SectionLayout';
 

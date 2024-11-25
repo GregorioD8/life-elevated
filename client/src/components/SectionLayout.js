@@ -1,3 +1,4 @@
+// src/components/SectionLayout.js
 import React from 'react';
 
 const SectionLayout = ({ title, summary }) => (

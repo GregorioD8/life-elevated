@@ -1,3 +1,4 @@
+// src/components/CareerTimeline.js
 import React from 'react';
 import {
   Chart as ChartJS,
@@ -24,7 +25,7 @@ const CareerTimeline = () => {
     datasets: [
       {
         label: 'Years of Service',
-        data: [33, 5, 20, 4],
+        data: [33, 2, 20, 5],
         backgroundColor: '#00509E', // Solid blue color
         hoverBackgroundColor: '#003F7D', // Darker blue on hover
         borderRadius: 10, // Rounded bars for modern look
