@@ -20,7 +20,7 @@ const CareerTimeline = () => {
       'Phoenix Fire Department',
       'Avondale Fire Chief',
       'Teaching Roles',
-      'Performance Specialist',
+      'TIGNUM Performance Specialist',
     ],
     datasets: [
       {

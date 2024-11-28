@@ -64,7 +64,7 @@ const AboutMe = () => {
             corporate events for Amazon, IBM, and Novartis Pharmaceuticals.
           </p>
           <p>
-            Jeff has been married to his wife for 35 years and is a proud father
+            Jeff has been married to his wife for 39 years and is a proud father
             of four adult children and grandfather to 13 grandchildren.
           </p>
         </motion.div>
