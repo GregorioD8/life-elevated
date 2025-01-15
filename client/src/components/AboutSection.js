@@ -1,8 +1,11 @@
 // src/components/AboutSection.js
 import React from 'react';
 import '../styles.css'; // Import the styles
+import { useNavigate } from 'react-router-dom'
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="about-section">
       <div className="about-content">
@@ -14,7 +17,7 @@ enhance performance and be your best for moments that matter the most.
         </p>
         <button
           className="learn-more-btn"
-          onClick={() => (window.location.href = '/about')}
+          onClick={() => navigate('/about')}
         >
           Learn More About Jeff
         </button>

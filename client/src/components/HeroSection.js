@@ -1,10 +1,13 @@
 // src/components/HeroSection.js
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos'; // Import AOS library
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init(); // Initialize AOS animations
   }, []);
@@ -29,14 +32,14 @@ const HeroSection = () => {
             <motion.button
               className="start-now-btn"
               whileHover={{ scale: 1.05 }}
-              onClick={() => (window.location.href = "/contact")}
+              onClick={() => navigate("/contact")}
             >
               Start Now
             </motion.button>
             <motion.button
               className="learn-more-btn"
               whileHover={{ scale: 1.05 }}
-              onClick={() => (window.location.href = "/services")}
+              onClick={() => navigate("/services")}
             >
               Learn More
             </motion.button>
